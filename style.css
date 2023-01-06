@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+}
+
+.bg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: url(bubbles-png-11427.png);
+    background-position: 0 0 ;
+    background-repeat: repeat-x;
+    overflow: hidden;
+    position: relative;
+    animation: animate 30s linear infinite;
+}
+
+.bg::before{
+    position: absolute;
+    content: 'devWithArsalan';
+    font-size: 200px;
+    font-weight: bold;
+    color: white;
+    animation: text 2s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 100% 0;
+    }
+}
+
+@keyframes text {
+    0%{
+        opacity: 1;
+        text-shadow: 0 0 20px grey, 0 0 50px grey, 0 0 100px grey, 0 0 160px grey, 0 0 200px grey;
+    }
+
+    100%{
+        opacity: 0;
+        text-shadow: none;
+    }
+}
